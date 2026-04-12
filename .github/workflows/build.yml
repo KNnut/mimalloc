@@ -1,0 +1,19 @@
+name: Build
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-24.04-arm
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v6
+
+      - name: Setup zig
+        uses: mlugg/setup-zig@v2
+
+      - name: Build (static library)
+        run: zig build
+
+      - name: Build (object file)
+        run: zig build -Dobject

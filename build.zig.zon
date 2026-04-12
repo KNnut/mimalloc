@@ -1,0 +1,18 @@
+.{
+    .name = .mimalloc,
+    .version = "3.2.8",
+    .fingerprint = 0x26391c39814737f4,
+    .minimum_zig_version = "0.15.2",
+    .dependencies = .{
+        .mimalloc = .{
+            .url = "git+https://github.com/microsoft/mimalloc?ref=v3.2.8#7b7fca4b7013d77e356d96e055fec309cb3cbbd6",
+            .hash = "N-V-__8AAAqCVABZiZaLXWRManwn6-SeQzXoA1snC5IbYiEi",
+        },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "LICENSE",
+        "README.md",
+    },
+}
