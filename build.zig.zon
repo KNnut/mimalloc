@@ -2,7 +2,7 @@
     .name = .mimalloc,
     .version = "3.5.3",
     .fingerprint = 0x26391c39814737f4,
-    .minimum_zig_version = "0.15.2",
+    .minimum_zig_version = "0.17.0",
     .dependencies = .{
         .mimalloc = .{
             .url = "git+https://github.com/microsoft/mimalloc?ref=v3.5.3#d4881d338125e1cb7c47ba4cfb398d6f7c0c8d45",

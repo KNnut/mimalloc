@@ -23,7 +23,7 @@ pub fn build(b: *std.Build) !void {
 
     mod.addCMacro("MI_MALLOC_OVERRIDE", "");
 
-    if (optimize != .Debug)
+    if (optimize != .debug)
         mod.addCMacro("MI_BUILD_RELEASE", "");
 
     var cflags: std.ArrayList([]const u8) = .empty;
@@ -85,13 +85,13 @@ pub fn build(b: *std.Build) !void {
             bool,
             "show-errors",
             "Printing of error and warning messages by default",
-        ) orelse (optimize == .Debug);
+        ) orelse (optimize == .debug);
 
         const guarded = b.option(
             bool,
             "guarded",
             "Guard pages behind certain object allocations",
-        ) orelse (optimize == .Debug);
+        ) orelse (optimize == .debug);
 
         const simd = b.option(
             bool,
