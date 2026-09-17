@@ -67,7 +67,7 @@ pub fn build(b: *std.Build) !void {
         );
 
         const flags = .{ secure, debug, stat };
-        const macros = .{ "SECURE", "DEBUG", "STAT" };
+        const macros = .{ "SECURE", "DEBUG", "STATS" };
 
         inline for (flags, macros) |flag, macro|
             if (flag) |level|
